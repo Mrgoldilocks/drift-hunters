@@ -1,12 +1,12 @@
 "use strict";
 var scripts = document.getElementsByTagName("script"),
     scriptUrl = scripts[scripts.length - 1].src,
-    root = scriptUrl.split("patch/sdkv3/master-loader.js")[0],
+    root = scriptUrl.split("https://cdn.jsdelivr.net/gh/Mrgoldilocks/drift-hunters@main/patch/sdkv3/master-loader.js")[0],
     loaders = {
-        unity: "patch/sdkv3/unity.js", "unity-2020": "patch/sdkv3/unity-2020.js"
+        unity: "https://cdn.jsdelivr.net/gh/Mrgoldilocks/drift-hunters@main/patch/sdkv3/unity.js", "unity-2020": "https://cdn.jsdelivr.net/gh/Mrgoldilocks/drift-hunters@main/patch/sdkv3/unity-2020.js"
     };
 if (0 <= window.location.href.indexOf("pokiForceLocalLoader") 
-	&& (loaders.unity = "patch/sdkv3/unity.js", 
+	&& (loaders.unity = "https://cdn.jsdelivr.net/gh/Mrgoldilocks/drift-hunters@main/patch/sdkv3/unity.js", 
 		
 		root = "/loaders"), !window.config) throw Error("window.config not found");
 var loader = loaders[window.config.loader];
@@ -15,7 +15,7 @@ if (!window.config.unityWebglLoaderUrl) {
     var versionSplit = window.config.unityVersion ? window.config.unityVersion.split(".") : [],
         year = versionSplit[0],
         minor = versionSplit[1];
-          window.config.unityWebglLoaderUrl ="patch/sdkv3/UnityLoader.js";
+          window.config.unityWebglLoaderUrl ="https://cdn.jsdelivr.net/gh/Mrgoldilocks/drift-hunters@main/patch/sdkv3/UnityLoader.js";
     // switch (year) {
     //     case "2019":
     //         window.config.unityWebglLoaderUrl = 1 === minor ? "./UnityLoader.2019.1.js" : "./UnityLoader.2019.2.js";
